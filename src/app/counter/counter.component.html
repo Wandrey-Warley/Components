@@ -1,0 +1,19 @@
+<script src="./counter.component.css"></script>
+<div class="component">
+  <button mat-button (click)="abrirContador()">Contador</button>
+  <mat-card *ngIf="exibir">
+    <div class="contador">
+      <div class="div">Contador {{ valor }}</div>
+      <div class="div">
+        <button [disabled]="valor >= 5" (click)="increment()">
+          Incrementar
+        </button>
+      </div>
+      <div class="div">
+        <button [disabled]="valor <= 0" (click)="decrement()">
+          Decrementar
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>

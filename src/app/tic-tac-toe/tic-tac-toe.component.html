@@ -1,0 +1,39 @@
+<script src="./tic-tac-toe.component.css"></script>
+<div class="component">
+  <button mat-button (click)="abrirJogo()">Tic-Tac-Toe</button>
+  <mat-card class="game" *ngIf="exibir">
+    <p class="nomeJogo" #nomeJogo>JOGO DA VELHA</p>
+    <div class="dados">
+      <span>Jogador atual: {{ player }}</span>
+      <span>{{ winner }} <= Campeão</span>
+    </div>
+    <div class="dados">
+      <span>Pontuação: X = {{ dotX }} | O = {{ dotO }}</span>
+    </div>
+    <div class="jogo">
+      <table>
+        <tr *ngFor="let row of [0, 1, 2]">
+          <td (click)="play(row, 0, player)">{{ board[row][0] }}</td>
+          <td (click)="play(row, 1, player)">{{ board[row][1] }}</td>
+          <td (click)="play(row, 2, player)">{{ board[row][2] }}</td>
+        </tr>
+        <tr>
+          <td (click)="play(1, 0, player)">{{ board[1][0] }}</td>
+          <td (click)="play(1, 1, player)">{{ board[1][1] }}</td>
+          <td (click)="play(1, 2, player)">{{ board[1][2] }}</td>
+        </tr>
+        <tr>
+          <td (click)="play(2, 0, player)" d>{{ board[2][0] }}</td>
+          <td (click)="play(2, 1, player)">{{ board[2][1] }}</td>
+          <td (click)="play(2, 2, player)">{{ board[2][2] }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="dados">
+      <button mat-button (click)="reiniciar()">Reiniciar</button>
+      <button mat-button (click)="reiniciarJogo()" class="fimDeJogo">
+        Reiniciar Pontuação
+      </button>
+    </div>
+  </mat-card>
+</div>

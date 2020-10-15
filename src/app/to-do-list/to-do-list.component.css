@@ -1,0 +1,22 @@
+.toDoList {
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 2px black;
+}
+mat-card {
+  margin: 10px;
+}
+table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}

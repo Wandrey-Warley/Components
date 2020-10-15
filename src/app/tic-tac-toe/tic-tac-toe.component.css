@@ -1,0 +1,53 @@
+.game {
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px grey;
+  width: 500px;
+}
+.fimDeJogo {
+  background-color: red;
+  color: white;
+}
+.nomeJogo {
+  background-color: rgb(10, 204, 204);
+  height: 2em;
+  margin: 5px;
+  border-radius: 5px;
+  text-shadow: 0px 0px 2px black;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jogo {
+  display: flex;
+  justify-content: center;
+}
+.dados {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+td {
+  border-spacing: 0px;
+  border: 1px solid black;
+  margin: 1px;
+  padding: 5px;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+}
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+button {
+  margin: 10px;
+}
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}

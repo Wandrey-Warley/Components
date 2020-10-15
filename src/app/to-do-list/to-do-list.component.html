@@ -1,0 +1,36 @@
+<div class="component">
+  <button mat-button (click)="abrirLista()">Lista de Tarefas</button>
+  <mat-card *ngIf="exibir">
+    <div>
+      <mat-form-field>
+        <mat-label>Tarefas</mat-label>
+        <input
+          matInput
+          #inputDescription
+          type="text"
+          placeholder="Descrição da tarefa"
+        />
+      </mat-form-field>
+
+      <button mat-button (click)="addTask(inputDescription.value)">
+        Adicionar a Tarefa
+      </button>
+    </div>
+    <table>
+      <tr *ngFor="let task of tasks; let i = index">
+        <ng-container *ngIf="!task.done">
+          <mat-card>
+            <td><mat-checkbox [checked]="task.done"></mat-checkbox></td>
+            <td>{{ task.description }}</td>
+            <td><button mat-button (click)="deleteTask(i)">Excluir</button></td>
+          </mat-card>
+        </ng-container>
+      </tr>
+    </table>
+    <div [ngSwitch]="tasks.length">
+      <div *ngSwitchCase="0">Nenhuma tarefa</div>
+      <div *ngSwitchCase="1">Uma tarefa</div>
+      <div *ngSwitchDefault>{{ tasks.length }} tarefas</div>
+    </div>
+  </mat-card>
+</div>

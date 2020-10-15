@@ -1,0 +1,25 @@
+.sheel {
+  padding: 0px;
+  margin: 0px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 74px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20%;
+  background-color: limegreen;
+}
+footer {
+  border: 1px black solid;
+  background-color: indigo;
+  color: white;
+  padding: 10px;
+  margin-top: 0px;
+  text-align: center;
+  align-content: center;
+}
